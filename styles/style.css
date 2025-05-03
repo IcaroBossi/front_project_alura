@@ -1,0 +1,154 @@
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727 ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    /* height: 100vh; */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content:  flex-start;
+    padding: 6% 15%;
+    gap: 200px;
+}
+
+.apresentacao__about{
+    display: flex;
+    align-items: center;
+    justify-content:  flex-start;
+    padding: 9% 15%;
+    gap: 82px;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: 'Krona One', sans-serif;
+}
+
+.titulo-destaque{
+    color: blue;
+}
+
+.apresentacao__conteudo__paragrafo{
+    font-size: 1.2rem;
+    font-family: 'Krona One', sans-serif;
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: 'Krona One ', 'sans-serif';
+    font-weight: 400;
+
+}
+
+.apresentacao__links_navegacao{
+    /* background-color: #22D4FD; */
+    justify-content: center;
+    gap: 16px;
+    display: flex;
+    width: 50%;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    padding: 22px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
+}
+
+.apresentacao__links_navegacao:hover{
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1100px) {
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
+
+/* 
+
+- O comando 'Ctrl + K + C' no HTML e no CSS serve para transformar a linha em comentario ;
+
+- O ':hover serve para quando passarmos o mouse em cima de un elemento, altera a cor, para identificar que o mouse está em cima ;
+
+- Para criar variaveis que serão reutilizadas no código, criar um :root e definir as variaveis e seus respectivos valores ;
+
+- Utilizar 'rem' no lugar de 'px' no 'font-size' para garantir que se o tamanho da fonte do navegador for alterado, também é alterado na nossa tela. 1 rem = 16px. Ou seja, se temos 24px, devemos dividir 24 por 16 para sabermos o valor de rem.
+
+- Colocar o width sempre em porcentagem (%) para garantir a responsividade da pagina ;
+
+- O @media (Media Querie) também serve para garantirmos a responsividade. Por exemplo, determinamos que se a tela tiver uma largura menor que 1100px, será aplicado o que esta dentro das chaves ;
+
+*/
